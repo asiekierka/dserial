@@ -504,7 +504,7 @@ void dseUartDefaultReceiveHandler(char * data, unsigned int size) {
 
 	memcpy(buffer, data, size);
 	buffer[size] = '\0';
-#ifdef BLOCKSDS
+#ifdef __BLOCKSDS__
 	printf(buffer);
 #else
 	iprintf(buffer);
